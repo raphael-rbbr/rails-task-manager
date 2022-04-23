@@ -1,0 +1,15 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<p><%= @task.completed %></p>
+
+<%= link_to "Do you wnat to edit this task?", "#{params[:id]}/edit"%>
+<br><br><br>
+
+<%= link_to "Delete this task?",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
+<br><br><br>
+
+<%# <%= link_to "Go back?", task_path(tasks)%>
